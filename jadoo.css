@@ -111,3 +111,10 @@
     margin-top: 116px;
     gap: 36px;
 }
+
+.destinations-image {
+    width: 422px;
+    display: inline-flex;
+    margin-left: 59px;
+    margin-top: 70px;
+}
