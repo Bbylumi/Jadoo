@@ -1,0 +1,32 @@
+<p>admin works!</p>
+<div class="admin-page">
+    <h2>Admin Management</h2>
+
+    <button (click)="openForm()">Add New Admin</button>
+
+    <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let admin of admins">
+            <td>{{ admin.firstName }}</td>
+            <td>{{ admin.lastName }}</td>
+            <td>{{ admin.email }}</td>
+            <td>{{ admin.role }}</td>
+            <td>{{ admin.active ? 'Active' : 'Inactive' }}</td>
+            <td>
+              <button (click)="activateAccount(admin)">Activate</button>
+              <button (click)="deactivateAccount(admin)">Deactivate</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
